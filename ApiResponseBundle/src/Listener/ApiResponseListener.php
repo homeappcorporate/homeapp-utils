@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace ApiResponseBundle\Listener;
+namespace Homeapp\ApiResponseBundle\Listener;
 
 use ApiResponseBundle\DTO\ApiResponse;
 use JMS\Serializer\SerializationContext;

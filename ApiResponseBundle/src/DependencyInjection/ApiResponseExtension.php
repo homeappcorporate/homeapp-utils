@@ -1,5 +1,5 @@
 <?php
-namespace ApiResponseBundle\DependencyInjection;
+namespace Homeapp\ApiResponseBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
