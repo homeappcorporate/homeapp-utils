@@ -6,10 +6,9 @@ services:
         autoconfigure: false
         public: true
 
-    ApiResponseBundle\:
-        resource: '../ApiResponseBundle/*'
-
     api_response.listener:
-        alias: ApiResponseBundle\Listener\ApiResponseListener
+        class: Homeapp\ApiResponseBundle\Listener\ApiResponseListener
+        arguments:
+            - '@jms_serializer.serializer'
         tags:
             - { name: kernel.event_listener, event: kernel.view }
