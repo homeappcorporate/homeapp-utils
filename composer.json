@@ -1,5 +1,5 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "homeapp/api-response",
     "license": "MIT",
     "type": "library",
     "description": "ApiResponseBundle",
