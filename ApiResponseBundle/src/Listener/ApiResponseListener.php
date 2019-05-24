@@ -2,7 +2,7 @@
 
 namespace Homeapp\ApiResponseBundle\Listener;
 
-use ApiResponseBundle\DTO\ApiResponse;
+use Homeapp\ApiResponseBundle\DTO\ApiResponse;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
