@@ -5,7 +5,7 @@
     "description": "ApiResponseBundle",
     "autoload": {
         "psr-0": {
-            "ApiResponseBundle\\": "ApiResponseBundle/src/"
+            "Homeapp\\ApiResponseBundle\\": "ApiResponseBundle/src/"
         }
     },
     "require": {
