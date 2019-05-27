@@ -6,7 +6,7 @@ services:
         autoconfigure: false
         public: true
 
-    api_response.listener:
+    homeapp.api_response.listener:
         class: Homeapp\UtilsBundle\Listener\ApiResponseListener
         arguments:
             - '@jms_serializer.serializer'
@@ -22,3 +22,11 @@ services:
         public: false
         class: Homeapp\UtilsBundle\Logger\NoBinaryFormatter
         arguments: ["{hostname} {req_header_User-Agent} - [{date_common_log}] \"{method} {target} HTTP/{version}\" {code} \n{req_body}\n--------\n{response}\n--------\n{error}"]
+
+    homeapp.orm.fix_schema_create_listener:
+        class: Homeapp\UtilsBundle\ORM\FixSchemaCreateListener
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+
+    homeapp.serializer.identical_naming_strategy:
+        class: Homeapp\UtilsBundle\Serializer\IdenticalStrategy
