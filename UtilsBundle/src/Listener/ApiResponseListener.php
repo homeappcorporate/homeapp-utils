@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Homeapp\ApiResponseBundle\Listener;
+namespace Homeapp\UtilsBundle\Listener;
 
-use Homeapp\ApiResponseBundle\DTO\ApiResponse;
+use Homeapp\UtilsBundle\DTO\ApiResponse;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Homeapp\ApiResponseBundle;
+namespace Homeapp\UtilsBundle;
 
-use Homeapp\ApiResponseBundle\DependencyInjection\ApiResponseExtension;
+use Homeapp\UtilsBundle\DependencyInjection\ApiResponseExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ApiResponseBundle extends Bundle
+class UtilsBundle extends Bundle
 {
     public function getContainerExtension()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Homeapp\ApiResponseBundle\DTO;
+namespace Homeapp\UtilsBundle\DTO;
 
 use JMS\Serializer\Annotation as Serializer;
 use Swagger\Annotations as SWG;

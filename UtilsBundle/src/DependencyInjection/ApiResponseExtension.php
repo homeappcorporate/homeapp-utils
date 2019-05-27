@@ -1,5 +1,5 @@
 <?php
-namespace Homeapp\ApiResponseBundle\DependencyInjection;
+namespace Homeapp\UtilsBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -14,6 +14,6 @@ class ApiResponseExtension extends Extension
             $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
-        $loader->load('config.yml');
+        $loader->load('services.yml');
     }
 }
