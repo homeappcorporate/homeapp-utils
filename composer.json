@@ -1,5 +1,5 @@
 {
-    "name": "homeapp/api-response",
+    "name": "homeapp/utils",
     "license": "MIT",
     "type": "library",
     "description": "UtilsBundle",
