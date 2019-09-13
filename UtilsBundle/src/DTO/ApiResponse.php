@@ -8,13 +8,13 @@ use Swagger\Annotations as SWG;
 class ApiResponse
 {
     /**
-     * @Serializer\Groups({"API", "LIST", "SHORT"})
+     * @Serializer\Groups({"API"})
      * @Serializer\Type("boolean")
      * @var boolean Удалось ли выполнить бизнес-логику, требуемую в запрос
      */
     private $success;
     /**
-     * @Serializer\Groups({"API", "LIST", "SHORT"})
+     * @Serializer\Groups({"API"})
      * @SWG\Property(type="array|string|null|integer")
      * @var mixed Данные, результат выполнения запроса
      */
@@ -22,12 +22,17 @@ class ApiResponse
 
     /**
      * @deprecated используется лишь для соответствия старому АПИ
-     * @Serializer\Groups({"API", "LIST", "SHORT"})
+     * @Serializer\Groups({"API"})
      * @Serializer\SerializedName("message")
      * @Serializer\Type("string")
      * @var mixed используется лишь для соответствия старому АПИ
      */
     private $error;
+    /**
+     * @var array|null
+     * @Serializer\Groups({"API"})
+     */
+    private $pageParams;
 
     private $contextGroups;
 
@@ -53,6 +58,7 @@ class ApiResponse
     {
         $obj = new self(['error' => $message], false, $groups, $code);
         $obj->error = $message;
+
         return $obj;
     }
 
@@ -60,6 +66,7 @@ class ApiResponse
     {
         $obj = new self(['error' => $message], false, $groups, 503, ['retry-after' => $waitSeconds]);
         $obj->error = $message;
+
         return $obj;
     }
 
@@ -86,5 +93,15 @@ class ApiResponse
     public function getHeaders(): array
     {
         return $this->headers;
+    }
+
+    public function getPageParams(): ?array
+    {
+        return $this->pageParams;
+    }
+
+    public function setPageParams(int $count, int $length): void
+    {
+        $this->pageParams = ['count' => $count, 'length' => $length];
     }
 }

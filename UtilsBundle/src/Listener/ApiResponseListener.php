@@ -6,7 +6,8 @@ use Homeapp\UtilsBundle\DTO\ApiResponse;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+use Symfony\Component\HttpKernel\Event\ViewEvent;
 
 class ApiResponseListener
 {
@@ -20,19 +21,32 @@ class ApiResponseListener
         $this->serializer = $serializer;
     }
 
-    public function onKernelView(GetResponseForControllerResultEvent $event)
+    public function onKernelView(ViewEvent $event): void
     {
         $result = $event->getControllerResult();
         if (!$result instanceof ApiResponse) {
             return;
         }
+        $response = $this->getResponse($result);
+        $event->setResponse($response);
+    }
+
+    public function onKernelException(ExceptionEvent $event): void
+    {
+        $e = $event->getException();
+        $result = ApiResponse::createError($e->getMessage(), 500, ['API']);
+        $event->setResponse($this->getResponse($result));
+    }
+
+    public function getResponse(ApiResponse $result): JsonResponse
+    {
         $groups = !empty($result->getContextGroups()) ? $result->getContextGroups() : ['API'];
         $cnt = SerializationContext::create();
         if (!empty($groups)) {
             $cnt->setGroups($groups);
         }
         $body = $this->serializer->serialize($result, 'json', $cnt);
-        $response = new JsonResponse($body, $result->getStatus(), [], true);
-        $event->setResponse($response);
+
+        return new JsonResponse($body, $result->getStatus(), [], true);
     }
 }
