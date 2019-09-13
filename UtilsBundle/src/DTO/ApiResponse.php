@@ -3,7 +3,6 @@
 namespace Homeapp\UtilsBundle\DTO;
 
 use JMS\Serializer\Annotation as Serializer;
-use Swagger\Annotations as SWG;
 
 class ApiResponse
 {
@@ -15,7 +14,6 @@ class ApiResponse
     private $success;
     /**
      * @Serializer\Groups({"API"})
-     * @SWG\Property(type="array|string|null|integer")
      * @var mixed Данные, результат выполнения запроса
      */
     private $data;
