@@ -17,15 +17,6 @@ class ApiResponse
      * @var mixed Данные, результат выполнения запроса
      */
     private $data;
-
-    /**
-     * @deprecated используется лишь для соответствия старому АПИ
-     * @Serializer\Groups({"API"})
-     * @Serializer\SerializedName("message")
-     * @Serializer\Type("string")
-     * @var mixed используется лишь для соответствия старому АПИ
-     */
-    private $error;
     /**
      * @var array|null
      * @Serializer\Groups({"API"})
@@ -37,6 +28,15 @@ class ApiResponse
     private $status;
 
     private $headers;
+    
+    /**
+     * @deprecated используется лишь для соответствия старому АПИ
+     * @Serializer\Groups({"OLD_API"})
+     * @Serializer\SerializedName("message")
+     * @Serializer\Type("string")
+     * @var mixed используется лишь для соответствия старому АПИ
+     */
+    private $error;
 
     public function __construct(
         $data,
@@ -98,8 +98,8 @@ class ApiResponse
         return $this->pageParams;
     }
 
-    public function setPageParams(int $count, int $length): void
+    public function setPageParams(int $page, int $length): void
     {
-        $this->pageParams = ['count' => $count, 'length' => $length];
+        $this->pageParams = ['page' => $page, 'length' => $length];
     }
 }
