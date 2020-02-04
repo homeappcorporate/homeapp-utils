@@ -47,6 +47,6 @@ class ApiResponseListener
         }
         $body = $this->serializer->serialize($result, 'json', $cnt);
 
-        return new JsonResponse($body, $result->getStatus(), [], true);
+        return new JsonResponse($body, $result->getStatus(), $result->getHeaders(), true);
     }
 }

@@ -28,7 +28,7 @@ class ApiResponse
     private $status;
 
     private $headers;
-    
+
     /**
      * @deprecated используется лишь для соответствия старому АПИ
      * @Serializer\Groups({"OLD_API"})
