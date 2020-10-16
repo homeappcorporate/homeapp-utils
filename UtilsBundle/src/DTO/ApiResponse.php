@@ -18,6 +18,11 @@ class ApiResponse
      */
     private $data;
     /**
+     * @Serializer\Groups({"API"})
+     * @var mixed|null
+     */
+    private $meta;
+    /**
      * @var array|null
      * @Serializer\Groups({"API"})
      */
@@ -76,6 +81,16 @@ class ApiResponse
     public function getData()
     {
         return $this->data;
+    }
+
+    public function getMeta()
+    {
+        return $this->meta;
+    }
+
+    public function setMeta($meta)
+    {
+        $this->meta = $meta;
     }
 
     public function getContextGroups(): array
