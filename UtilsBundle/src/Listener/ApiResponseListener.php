@@ -3,6 +3,7 @@
 namespace Homeapp\UtilsBundle\Listener;
 
 use Homeapp\UtilsBundle\DTO\ApiResponse;
+use Homeapp\UtilsBundle\DTO\ApiResponseInterface;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -24,9 +25,10 @@ class ApiResponseListener
     public function onKernelView(ViewEvent $event): void
     {
         $result = $event->getControllerResult();
-        if (!$result instanceof ApiResponse) {
+        if (!$result instanceof ApiResponseInterface) {
             return;
         }
+
         $response = $this->getResponse($result);
         $event->setResponse($response);
     }
@@ -38,14 +40,14 @@ class ApiResponseListener
         $event->setResponse($this->getResponse($result));
     }
 
-    public function getResponse(ApiResponse $result): JsonResponse
+    public function getResponse(ApiResponseInterface $result): JsonResponse
     {
         $groups = !empty($result->getContextGroups()) ? $result->getContextGroups() : ['API'];
         $cnt = SerializationContext::create();
         if (!empty($groups)) {
             $cnt->setGroups($groups);
         }
-        $body = $this->serializer->serialize($result, 'json', $cnt);
+        $body = $this->serializer->serialize($result->getSerializationBlock(), 'json', $cnt);
 
         return new JsonResponse($body, $result->getStatus(), $result->getHeaders(), true);
     }
