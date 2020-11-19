@@ -4,6 +4,7 @@ namespace Homeapp\UtilsBundle\DTO;
 
 use JMS\Serializer\Annotation as Serializer;
 
+
 class JsonApiResponse implements ApiResponseInterface
 {
     private const HEADERS = [
