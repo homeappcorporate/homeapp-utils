@@ -8,7 +8,7 @@ use JMS\Serializer\Annotation as Serializer;
 class JsonApiResponse implements ApiResponseInterface
 {
     private const HEADERS = [
-        'Content type' => 'application/vnd.api+json'
+        'Content-Type' => 'application/vnd.api+json'
     ];
 
     /**
