@@ -5,7 +5,8 @@
     "description": "UtilsBundle",
     "autoload": {
         "psr-4": {
-            "Homeapp\\UtilsBundle\\": "UtilsBundle/src/"
+            "Homeapp\\UtilsBundle\\": "UtilsBundle/src/",
+            "Homeapp\\JsonApi\\": "JsonApi/src/"
         }
     },
     "require": {
