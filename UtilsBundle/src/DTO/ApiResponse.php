@@ -4,7 +4,7 @@ namespace Homeapp\UtilsBundle\DTO;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class ApiResponse
+class ApiResponse implements ApiResponseInterface
 {
     /**
      * @Serializer\Groups({"API"})
@@ -116,5 +116,11 @@ class ApiResponse
     public function setPageParams(int $page, int $length): void
     {
         $this->pageParams = ['page' => $page, 'length' => $length];
+    }
+
+    /** @return mixed */
+    public function getSerializationBlock()
+    {
+        return $this;
     }
 }
