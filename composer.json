@@ -6,7 +6,7 @@
     "autoload": {
         "psr-4": {
             "Homeapp\\UtilsBundle\\": "UtilsBundle/src/",
-            "Homeapp\\JsonApi\\": "JsonApi/src/",
+            "Homeapp\\JsonApi\\": "JsonApi/",
             "Homeapp\\HomeappData\\": "HomeappData/"
         }
     },
