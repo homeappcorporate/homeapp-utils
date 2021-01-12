@@ -1,9 +1,10 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\HomeappData\Registry\Dto\AddressMetroDistance;
 
 use Homeapp\JsonApi\Attributes\AttributesInterface;
-use Homeapp\HomeappData\Registry\Enum\MetroDistance\MethodEnum;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -36,19 +37,11 @@ class Attributes implements AttributesInterface
         $this->distance = $distance;
     }
 
-    public static function createForCar(int $distance, int $time): self
+    public static function createFromParams(int $distance, int $time, string $method): self
     {
         $data = new self($distance);
         $data->time = $time;
-        $data->method = MethodEnum::CAR;
-        return $data;
-    }
-
-    public static function createForFoot(int $distance, int $time): self
-    {
-        $data = new self($distance);
-        $data->time = $time;
-        $data->method = MethodEnum::FOOT;
+        $data->method = $method;
         return $data;
     }
 }
