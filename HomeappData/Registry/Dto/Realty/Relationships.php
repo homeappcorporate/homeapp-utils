@@ -5,7 +5,7 @@ namespace Homeapp\HomeappData\Registry\Dto\Realty;
 use Homeapp\JsonApi\Relationships\RelationshipsBlockMultiple;
 use Homeapp\JsonApi\Relationships\RelationshipsBlockSingle;
 use Homeapp\JsonApi\Relationships\RelationshipsInterface;
-use Homeapp\JsonApi\JsonApiException;
+use Homeapp\JsonApi\DataParsingException;
 use JMS\Serializer\Annotation as Serializer;
 
 class Relationships implements RelationshipsInterface

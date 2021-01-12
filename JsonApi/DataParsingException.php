@@ -4,7 +4,7 @@ namespace Homeapp\JsonApi;
 
 use LogicException;
 
-class JsonApiException extends LogicException
+class DataParsingException extends LogicException
 {
     private const UNDEFINED_ID = 'entity id is undefined';
     private const INVALID_ENT_TYPE = 'invalid entity type:  passed %s, but expected %s';
