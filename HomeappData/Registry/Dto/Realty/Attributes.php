@@ -83,7 +83,7 @@ class Attributes implements AttributesInterface
 
     /**
      * @var ToiletDto[]
-     * @Serializer\Type("array<App\Application\Dto\Realty\ToiletDto>")
+     * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\RealtyToiletDto>")
      * @Serializer\Groups({"API"})
      */
     public array $toilets = [];

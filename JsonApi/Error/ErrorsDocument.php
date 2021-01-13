@@ -1,14 +1,16 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\JsonApi\Error;
 
-use Homeapp\JsonApi\JsonApiResponseInterface;
+use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
  * JsonApi-документ, состоящий из списка ошибок
  */
-class ErrorsDocument implements JsonApiResponseInterface
+class ErrorsDocument implements JsonApiDocumentBodyInterface
 {
     /**
      * @var Error[]

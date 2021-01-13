@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\JsonApi;
 
@@ -14,7 +16,7 @@ use JMS\Serializer\Annotation as Serializer;
  *
  * @property-read null|Meta $meta
  */
-class ListCompoundDocument implements JsonApiResponseInterface
+class ListCompoundDocument implements JsonApiDocumentBodyInterface
 {
     /**
      * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
