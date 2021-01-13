@@ -23,4 +23,14 @@ class EmptyCompoundDocument implements JsonApiDocumentBodyInterface
     {
         $this->data = null;
     }
+
+    public function addConsistencyData(string $message): void
+    {
+        // TODO: Implement addConsistencyData() method.
+    }
+
+    public function withSentFieldsCollection(SentFieldsCollection $fields): void
+    {
+        // TODO: Implement withSentFieldsCollection() method.
+    }
 }

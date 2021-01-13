@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Homeapp\JsonApi\Error;
 
 use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
+use Homeapp\JsonApi\SentFieldsCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -22,5 +23,15 @@ class ErrorsDocument implements JsonApiDocumentBodyInterface
     public function __construct(Error ...$errors)
     {
         $this->errors = $errors;
+    }
+
+    public function addConsistencyData(string $message): void
+    {
+        // TODO: Implement addConsistencyData() method.
+    }
+
+    public function withSentFieldsCollection(SentFieldsCollection $fields): void
+    {
+        // TODO: Implement withSentFieldsCollection() method.
     }
 }
