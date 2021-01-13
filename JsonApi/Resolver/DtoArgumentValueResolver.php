@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Homeapp\JsonApi\Resolver;
 
 use Homeapp\JsonApi;
+use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
@@ -21,15 +22,15 @@ class DtoArgumentValueResolver implements ArgumentValueResolverInterface
 
     public function supports(Request $request, ArgumentMetadata $argument): bool
     {
-        return stripos($argument->getType(), 'Homeapp\\Dto') === 0;
+        return false !== stripos($argument->getType(), 'CompoundDocument');
     }
 
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
         $content = $request->getContent();
 
-        /** @var JsonApi\CompoundDocument $data */
-        $data = $this->serializer->deserialize($content, JsonApi\CompoundDocument::class, 'json');
+        /** @var JsonApiDocumentBodyInterface $data */
+        $data = $this->serializer->deserialize($content, $argument->getType(), 'json');
 
         $fieldsData = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
         $data->withSentFieldsCollection(new JsonApi\SentFieldsCollection(

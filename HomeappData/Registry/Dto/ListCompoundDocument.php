@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\JsonApi;
+namespace Homeapp\HomeappData\Registry\Dto;
 
+use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
 use Homeapp\JsonApi\Meta\Meta;
 use Homeapp\JsonApi\Meta\MetaPage;
+use Homeapp\JsonApi\ResourceInterface;
+use Homeapp\JsonApi\SentFieldsCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -19,13 +22,11 @@ use JMS\Serializer\Annotation as Serializer;
 class ListCompoundDocument implements JsonApiDocumentBodyInterface
 {
     /**
-     * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
      * @Serializer\Groups({"API"})
      */
     public array $data;
 
     /**
-     * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
      * @Serializer\Groups({"API"})
      */
     public array $included = [];
@@ -55,5 +56,15 @@ class ListCompoundDocument implements JsonApiDocumentBodyInterface
             $this->meta->page = new MetaPage($offset, $count, $total);
         }
         $this->meta->page->update($offset, $count, $total);
+    }
+
+    public function addConsistencyData(string $message): void
+    {
+        // TODO: Implement addConsistencyData() method.
+    }
+
+    public function withSentFieldsCollection(SentFieldsCollection $fields): void
+    {
+        // TODO: Implement withSentFieldsCollection() method.
     }
 }
