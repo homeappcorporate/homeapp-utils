@@ -22,11 +22,13 @@ use JMS\Serializer\Annotation as Serializer;
 class ListCompoundDocument implements JsonApiDocumentBodyInterface
 {
     /**
+     * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
      * @Serializer\Groups({"API"})
      */
     public array $data;
 
     /**
+     * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
      * @Serializer\Groups({"API"})
      */
     public array $included = [];
