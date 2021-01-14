@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\HomeappData\Registry\Dto\Realty;
 
@@ -7,35 +9,30 @@ use JMS\Serializer\Annotation as Serializer;
 class DduOwnerDto
 {
     /**
-     * @var string
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
     public string $kind;
 
     /**
-     * @var string|null
      * @Serializer\Type("string")
      * @Serializer\Groups({"USER"})
      */
     public ?string $inn = null;
 
     /**
-     * @var string|null
      * @Serializer\Type("string")
      * @Serializer\Groups({"USER"})
      */
     public ?string $firstName = null;
 
     /**
-     * @var string|null
      * @Serializer\Type("string")
      * @Serializer\Groups({"USER"})
      */
     public ?string $lastName = null;
 
     /**
-     * @var string|null
      * @Serializer\Type("string")
      * @Serializer\Groups({"USER"})
      */
