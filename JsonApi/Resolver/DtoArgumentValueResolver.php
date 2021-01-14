@@ -33,10 +33,12 @@ class DtoArgumentValueResolver implements ArgumentValueResolverInterface
         $data = $this->serializer->deserialize($content, $argument->getType(), 'json');
 
         $fieldsData = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-        $data->withSentFieldsCollection(new JsonApi\SentFieldsCollection(
-            array_keys(get_object_vars($fieldsData->data->attributes)),
-            array_keys(get_object_vars($fieldsData->data->relationships))
-        ));
+        if (!is_array($fieldsData->data)) {
+            $data->withSentFieldsCollection(new JsonApi\SentFieldsCollection(
+                array_keys(get_object_vars($fieldsData->data->attributes)),
+                array_keys(get_object_vars($fieldsData->data->relationships))
+            ));
+        }
 
         yield $data;
     }

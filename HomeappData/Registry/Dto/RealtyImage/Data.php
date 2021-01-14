@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\HomeappData\Registry\Dto\RealtyImage;
 
@@ -15,13 +17,13 @@ use JMS\Serializer\Annotation as Serializer;
 class Data extends ResourceObject
 {
     /**
-     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\Realty\Attributes")
+     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\RealtyImage\Attributes")
      * @Serializer\Groups({"API"})
      */
     public ?AttributesInterface $attributes = null;
 
     /**
-     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\Realty\Relationships")
+     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\RealtyImage\Relationships")
      * @Serializer\Groups({"API"})
      */
     public ?RelationshipsInterface $relationships = null;
