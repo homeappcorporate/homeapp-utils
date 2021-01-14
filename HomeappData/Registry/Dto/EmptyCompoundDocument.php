@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\JsonApi;
+namespace Homeapp\HomeappData\Registry\Dto;
 
+use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
+use Homeapp\JsonApi\SentFieldsCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
