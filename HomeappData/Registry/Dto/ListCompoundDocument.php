@@ -14,8 +14,8 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * CompoundDocument в терминах JsonApi. Для списков.
  *
- * @property-read ResourceInterface[] $data
- * @property-read ResourceInterface[] $included
+ * @property-read ResourceObject[] $data
+ * @property-read ResourceObject[] $included
  *
  * @property-read null|Meta $meta
  */
