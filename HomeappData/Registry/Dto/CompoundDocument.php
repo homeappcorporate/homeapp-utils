@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * CompoundDocument в терминах JsonApi
  *
- * @property-read ResourceInterface $data
- * @property-read ResourceInterface[] $included
+ * @property-read ResourceObject $data
+ * @property-read ResourceObject[] $included
  *
  * @property-read null|Meta\Meta $meta
  * @property-read null|SentFieldsCollection $sentFieldsCollection
@@ -25,7 +25,7 @@ class CompoundDocument implements JsonApiDocumentBodyInterface
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\ResourceObject")
      * @Serializer\Groups({"API"})
      */
-    public ResourceInterface $data;
+    public ResourceObject $data;
 
     /**
      * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
