@@ -6,7 +6,6 @@ namespace Homeapp\HomeappData\Registry\Dto\Address;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\JsonApi\Attributes\AttributesInterface;
-use Homeapp\JsonApi\Meta\Meta;
 use Homeapp\JsonApi\Relationships\RelationshipsInterface;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
 use JMS\Serializer\Annotation as Serializer;
@@ -29,9 +28,9 @@ class Data extends ResourceObject
      */
     public ?RelationshipsInterface $relationships = null;
 
-    public function __construct(?string $id, ?AttributesInterface $attributes, ?RelationshipsInterface $relationships, Meta $meta = null)
+    public function __construct(?string $id, ?AttributesInterface $attributes, ?RelationshipsInterface $relationships)
     {
-        parent::__construct($id, EntityNameEnum::ADDRESS, $meta);
+        parent::__construct($id, EntityNameEnum::ADDRESS);
         $this->attributes = $attributes;
         $this->relationships = $relationships;
     }
