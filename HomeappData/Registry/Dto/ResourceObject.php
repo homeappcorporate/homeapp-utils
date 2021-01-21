@@ -40,10 +40,9 @@ abstract class ResourceObject implements ResourceInterface
      */
     public ?Meta $meta = null;
 
-    public function __construct(?string $id, string $type, Meta $meta = null)
+    public function __construct(?string $id, string $type)
     {
         $this->id = $id;
         $this->type = $type;
-        $this->meta = $meta;
     }
 }

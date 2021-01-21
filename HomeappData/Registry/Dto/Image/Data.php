@@ -7,7 +7,6 @@ namespace Homeapp\HomeappData\Registry\Dto\Image;
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\JsonApi\Attributes\AttributesInterface;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
-use Homeapp\JsonApi\Meta\Meta;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -21,9 +20,9 @@ class Data extends ResourceObject
      */
     public ?AttributesInterface $attributes = null;
 
-    public function __construct(?string $id, ?AttributesInterface $attributes, Meta $meta = null)
+    public function __construct(?string $id, ?AttributesInterface $attributes)
     {
-        parent::__construct($id, EntityNameEnum::IMAGE, $meta);
+        parent::__construct($id, EntityNameEnum::IMAGE);
         $this->attributes = $attributes;
     }
 }
