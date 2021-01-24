@@ -78,4 +78,11 @@ class Attributes implements AttributesInterface
      * @Serializer\Groups({"API"})
      */
     public ?int $buildYear = null;
+
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\Groups({"API"})
+     */
+    public ?bool $hasGarbageChute = null;
 }
