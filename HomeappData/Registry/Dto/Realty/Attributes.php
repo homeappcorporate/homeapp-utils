@@ -132,6 +132,12 @@ class Attributes implements AttributesInterface
      */
     public ?string $dealType = null;
 
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $cadastralNumber = null;
+
     //========================== ТОЛЬКО ДЛЯ КВАРТИР =============================
 
     /**
@@ -341,6 +347,12 @@ class Attributes implements AttributesInterface
      * @Serializer\Groups({"API"})
      */
     public ?string $shareSize = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $landUsageType;
 
     public function __construct(
         string $realtyType,
