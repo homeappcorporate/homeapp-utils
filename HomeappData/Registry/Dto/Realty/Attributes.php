@@ -352,7 +352,7 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $landUsageType;
+    public ?string $landUsageType = null;
 
     public function __construct(
         string $realtyType,
