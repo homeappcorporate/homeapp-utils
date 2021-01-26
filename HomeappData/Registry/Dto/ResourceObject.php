@@ -2,6 +2,7 @@
 
 namespace Homeapp\HomeappData\Registry\Dto;
 
+use Homeapp\JsonApi\Meta\Meta;
 use Homeapp\JsonApi\ResourceInterface;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -32,6 +33,12 @@ abstract class ResourceObject implements ResourceInterface
      * @Serializer\Groups({"API"})
      */
     public ?string $id = null;
+
+    /**
+     * @Serializer\Type("Homeapp\JsonApi\Meta\Meta")
+     * @Serializer\Groups({"API"})
+     */
+    public ?Meta $meta = null;
 
     public function __construct(?string $id, string $type)
     {

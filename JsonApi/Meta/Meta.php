@@ -1,7 +1,10 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\JsonApi\Meta;
 
+use DateTimeImmutable;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -21,5 +24,11 @@ class Meta
      * @Serializer\Type("array<Homeapp\JsonApi\Meta\MetaConsistencyItem>")
      * @Serializer\Groups({"API"})
      */
-    public array $consistency = [];
+    public ?array $consistency = null;
+
+    /**
+     * @Serializer\Groups({"API"})
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
+     */
+    public ?DateTimeImmutable $updatedAt = null;
 }

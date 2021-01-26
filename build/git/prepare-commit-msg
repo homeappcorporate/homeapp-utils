@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Installation: ln -s `pwd`/build/git/prepare-commit-msg .git/hooks/prepare-commit-msg && chmod +x .git/hooks/prepare-commit-msg
+
+TASK=`git symbolic-ref HEAD| sed -e 's|^refs/heads/||' | sed -e 's|^feature/||' | sed -e 's|^task/||' | sed -e 's|^hotfix/||'`
+DESCRIPTION=`cat $1`
+if [ -n "$TASK" ] && [[ "$DESCRIPTION" != "[#$TASK]:"* ]]
+then
+    TAG=`git symbolic-ref HEAD| grep 'hotfix/'`
+    if [ -n "$TAG" ]
+    then
+        echo "[$TASK]: [HOTFIX] $DESCRIPTION" > $1
+    else
+        echo "[$TASK]: $DESCRIPTION" > $1
+    fi
+fi
