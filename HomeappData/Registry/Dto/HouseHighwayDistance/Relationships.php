@@ -18,10 +18,16 @@ class Relationships implements RelationshipsInterface
      */
     public RelationshipsBlockSingle $highway;
 
-    public function __construct(string $id, string $type)
+    /**
+     * @var RelationshipsBlockSingle
+     * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockSingle")
+     * @Serializer\Groups({"API"})
+     */
+    public RelationshipsBlockSingle $realty;
+
+    public function __construct(RelationshipsBlockSingle $highway, RelationshipsBlockSingle $realty)
     {
-        $this->highway = new RelationshipsBlockSingle(
-            new ResourceIdentifierObject($id, $type)
-        );
+        $this->highway = $highway;
+        $this->realty = $realty;
     }
 }
