@@ -45,6 +45,9 @@ class CompoundDocument implements JsonApiDocumentBodyInterface
         $this->included = $included;
     }
 
+    /**
+     * @deprecated Перенесено в ResourceObject
+     */
     public function addConsistencyData(string $message): void
     {
         if ($this->meta === null) {

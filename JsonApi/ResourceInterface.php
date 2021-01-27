@@ -4,4 +4,7 @@ namespace Homeapp\JsonApi;
 
 interface ResourceInterface
 {
+    public function addConsistencyData(string $message): void;
+
+    public function redefineMeta(Meta\ResourceObjectMeta $clientMeta): void;
 }

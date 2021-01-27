@@ -1,10 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\HomeappData\Registry\Dto;
 
-use Homeapp\JsonApi\Meta\Meta;
+use Homeapp\JsonApi\Meta;
 use Homeapp\JsonApi\ResourceInterface;
-use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @property-read null|string $id
@@ -35,14 +36,33 @@ abstract class ResourceObject implements ResourceInterface
     public ?string $id = null;
 
     /**
-     * @Serializer\Type("Homeapp\JsonApi\Meta\Meta")
+     * @Serializer\Type("Homeapp\JsonApi\Meta\ResourceObjectMeta")
      * @Serializer\Groups({"API"})
      */
-    public ?Meta $meta = null;
+    public ?Meta\ResourceObjectMeta $meta = null;
 
     public function __construct(?string $id, string $type)
     {
         $this->id = $id;
         $this->type = $type;
+    }
+
+    public function addConsistencyData(string $message): void
+    {
+        if ($this->meta === null) {
+            $this->meta = new Meta\ResourceObjectMeta();
+        }
+        $this->meta->consistency[] = new Meta\MetaConsistencyItem($message);
+    }
+
+    public function redefineMeta(Meta\ResourceObjectMeta $clientMeta): void
+    {
+        if ($this->meta === null) {
+            $this->meta = new Meta\ResourceObjectMeta();
+        }
+
+        $clientMeta->consistency = $this->meta->consistency;
+        $clientMeta->updatedAt = $this->meta->updatedAt;
+        $this->meta = $clientMeta;
     }
 }
