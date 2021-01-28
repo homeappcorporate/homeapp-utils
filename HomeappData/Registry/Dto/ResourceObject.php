@@ -6,6 +6,8 @@ namespace Homeapp\HomeappData\Registry\Dto;
 
 use Homeapp\JsonApi\Meta;
 use Homeapp\JsonApi\ResourceInterface;
+use Homeapp\JsonApi\ResourceObjectInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @property-read null|string $id
@@ -27,7 +29,7 @@ use Homeapp\JsonApi\ResourceInterface;
  *    "realtyMetroDistance": "Homeapp\HomeappData\Registry\Dto\RealtyMetroDistance\Data",
  * }, groups={"API"})
  */
-abstract class ResourceObject implements ResourceInterface
+abstract class ResourceObject implements ResourceInterface, ResourceObjectInterface
 {
     /**
      * @Serializer\Type("string")

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Homeapp\JsonApi\Meta;
 
 use DateTimeImmutable;
+use JMS\Serializer\Annotation as Serializer;
 
 class ResourceObjectMeta
 {
