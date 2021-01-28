@@ -1,10 +1,9 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Homeapp\JsonApi;
 
 interface ResourceInterface
 {
-    public function addConsistencyData(string $message): void;
-
-    public function redefineMeta(Meta\ResourceObjectMeta $clientMeta): void;
 }
