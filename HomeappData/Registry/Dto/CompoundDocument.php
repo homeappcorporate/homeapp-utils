@@ -8,6 +8,7 @@ use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
 use Homeapp\JsonApi\Meta;
 use Homeapp\JsonApi\ResourceInterface;
 use Homeapp\JsonApi\SentFieldsCollection;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * CompoundDocument в терминах JsonApi
