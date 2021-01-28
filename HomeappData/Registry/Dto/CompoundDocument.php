@@ -8,7 +8,6 @@ use Homeapp\JsonApi\JsonApiDocumentBodyInterface;
 use Homeapp\JsonApi\Meta;
 use Homeapp\JsonApi\ResourceInterface;
 use Homeapp\JsonApi\SentFieldsCollection;
-use JMS\Serializer\Annotation as Serializer;
 
 /**
  * CompoundDocument в терминах JsonApi
@@ -43,14 +42,6 @@ class CompoundDocument implements JsonApiDocumentBodyInterface
     {
         $this->data = $data;
         $this->included = $included;
-    }
-
-    public function addConsistencyData(string $message): void
-    {
-        if ($this->meta === null) {
-            $this->meta = new Meta\Meta();
-        }
-        $this->meta->consistency[] = new Meta\MetaConsistencyItem($message);
     }
 
     public function withSentFieldsCollection(SentFieldsCollection $fields): void

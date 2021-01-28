@@ -7,7 +7,5 @@ namespace Homeapp\JsonApi;
 /** Интерфейс для DTO, которые возвращаются в качестве тела ответа */
 interface JsonApiDocumentBodyInterface
 {
-    public function addConsistencyData(string $message): void;
-
     public function withSentFieldsCollection(SentFieldsCollection $fields): void;
 }
