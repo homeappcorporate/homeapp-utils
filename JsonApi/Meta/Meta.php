@@ -18,21 +18,4 @@ class Meta
      * @Serializer\Groups({"API"})
      */
     public ?MetaPage $page = null;
-
-    /**
-     * @var MetaConsistencyItem[]
-     * @Serializer\Type("array<Homeapp\JsonApi\Meta\MetaConsistencyItem>")
-     * @Serializer\Groups({"API"})
-     *
-     * @deprecated перенесено в ResourceObjectMeta
-     */
-    public ?array $consistency = null;
-
-    /**
-     * @Serializer\Groups({"API"})
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
-     *
-     * @deprecated перенесено в ResourceObjectMeta
-     */
-    public ?DateTimeImmutable $updatedAt = null;
 }
