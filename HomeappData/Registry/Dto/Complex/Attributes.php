@@ -18,8 +18,15 @@ class Attributes implements AttributesInterface
      */
     public string $name;
 
-    public function __construct(string $name)
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public string $fullName;
+
+    public function __construct(string $name, string $fullName)
     {
         $this->name = $name;
+        $this->fullName = $fullName;
     }
 }
