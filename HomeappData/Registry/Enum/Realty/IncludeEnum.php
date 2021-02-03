@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -14,7 +14,7 @@ class IncludeEnum
     public const COMPLEX = 'complex';
     public const REALTY_METRO = 'metroDistance.metroStation';
     public const ADDRESS_METRO = 'address.metroDistance.metroStation';
-    public const HIGHWAYS = 'highwayDistance.highway';
+    public const HIGHWAYS = 'houseHighwayDistance.highway';
     public const IMAGES = 'realtyImage.image';
 
     public static function getNames(): array
@@ -24,7 +24,7 @@ class IncludeEnum
             self::COMPLEX => 'complex',
             self::REALTY_METRO => 'metroDistance.metroStation',
             self::ADDRESS_METRO => 'address.metroDistance.metroStation',
-            self::HIGHWAYS => 'highwayDistance.highway',
+            self::HIGHWAYS => 'houseHighwayDistance.highway',
             self::IMAGES => 'realtyImage.image',
         ];
     }
