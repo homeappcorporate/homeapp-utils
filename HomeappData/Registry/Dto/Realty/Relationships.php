@@ -27,13 +27,13 @@ class Relationships implements RelationshipsInterface
      * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockMultiple")
      * @Serializer\Groups({"API"})
      */
-    public ?RelationshipsBlockMultiple $metroDistance = null;
+    public ?RelationshipsBlockMultiple $realtyMetroDistance = null;
 
     /**
      * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockMultiple")
      * @Serializer\Groups({"API"})
      */
-    public ?RelationshipsBlockMultiple $highwayDistance = null;
+    public ?RelationshipsBlockMultiple $houseHighwayDistance = null;
 
     /**
      * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockMultiple")
