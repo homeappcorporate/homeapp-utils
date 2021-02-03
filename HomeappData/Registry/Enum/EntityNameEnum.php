@@ -13,7 +13,7 @@ class EntityNameEnum
     public const ADDRESS_METRO_DIST = 'addressMetroDistance';
     public const REALTY_METRO_DIST = 'realtyMetroDistance';
     public const METRO_STATION = 'metroStation';
-    public const HOUSE_HIGHWAY_DISTANCE = 'highwayDistance';
+    public const HOUSE_HIGHWAY_DISTANCE = 'houseHighwayDistance';
     public const HIGHWAY = 'highway';
     public const DISTRICT = 'district';
     public const CITY_AREA = 'cityArea';
