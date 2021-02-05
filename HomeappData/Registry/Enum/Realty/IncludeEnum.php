@@ -12,9 +12,9 @@ class IncludeEnum
     public const ADDRESS = 'address';
     public const ADDRESS_BTI = 'address.bti';
     public const COMPLEX = 'complex';
-    public const REALTY_METRO = 'metroDistance.metroStation';
+    public const REALTY_METRO = 'realtyMetroDistance.metroStation';
     public const ADDRESS_METRO = 'address.metroDistance.metroStation';
-    public const HIGHWAYS = 'highwayDistance.highway';
+    public const HIGHWAYS = 'houseHighwayDistance.highway';
     public const IMAGES = 'realtyImage.image';
 
     public static function getNames(): array
@@ -22,9 +22,9 @@ class IncludeEnum
         return [
             self::ADDRESS_BTI => 'address.bti',
             self::COMPLEX => 'complex',
-            self::REALTY_METRO => 'metroDistance.metroStation',
+            self::REALTY_METRO => 'realtyMetroDistance.metroStation',
             self::ADDRESS_METRO => 'address.metroDistance.metroStation',
-            self::HIGHWAYS => 'highwayDistance.highway',
+            self::HIGHWAYS => 'houseHighwayDistance.highway',
             self::IMAGES => 'realtyImage.image',
         ];
     }
