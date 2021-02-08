@@ -8,24 +8,24 @@ use Homeapp\JsonApi\Attributes\AttributesInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * @property-read int $distanceCity
- * @property-read int $distanceMkad
+ * @property-read float $distanceCity
+ * @property-read float $distanceMkad
  */
 class Attributes implements AttributesInterface
 {
     /**
-     * @Serializer\Type("int")
+     * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public int $distanceCity;
+    public float $distanceCity;
 
     /**
-     * @Serializer\Type("int")
+     * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public int $distanceMkad;
+    public float $distanceMkad;
 
-    public function __construct(int $distanceCity, int $distanceMkad)
+    public function __construct(float $distanceCity, float $distanceMkad)
     {
         $this->distanceCity = $distanceCity;
         $this->distanceMkad = $distanceMkad;
