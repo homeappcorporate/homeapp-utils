@@ -18,7 +18,7 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $title;
+    public ?string $title = null;
 
     /**
      * @Serializer\Type("string")
@@ -32,9 +32,8 @@ class Attributes implements AttributesInterface
      */
     public bool $isPinned;
 
-    public function __construct(?string $title, string $group, bool $isPinned)
+    public function __construct(string $group, bool $isPinned)
     {
-        $this->title = $title;
         $this->group = $group;
         $this->isPinned = $isPinned;
     }
