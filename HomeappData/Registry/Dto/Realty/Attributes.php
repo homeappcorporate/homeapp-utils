@@ -127,6 +127,12 @@ class Attributes implements AttributesInterface
     public ?bool $hasMortgage = null;
 
     /**
+     * @Serializer\Type("bool")
+     * @Serializer\Groups({"API"})
+     */
+    public ?bool $hasInstalment = null;
+
+    /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
@@ -353,6 +359,42 @@ class Attributes implements AttributesInterface
      * @Serializer\Groups({"API"})
      */
     public ?string $landUsageType = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $landPurpose = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $landShape = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $relief = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $furniture = null;
+
+    /**
+     * @Serializer\Type("float")
+     * @Serializer\Groups({"API"})
+     */
+    public ?float $cityDistance = null;
+
+    /**
+     * @Serializer\Type("boolean")
+     * @Serializer\Groups({"API"})
+     */
+    public ?bool $burden = null;
 
     public function __construct(
         string $realtyType,
