@@ -8,7 +8,6 @@ use Homeapp\JsonApi\Attributes\AttributesInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * @property-read null|string $title
  * @property-read string $group
  * @property-read bool $isPinned
  */
