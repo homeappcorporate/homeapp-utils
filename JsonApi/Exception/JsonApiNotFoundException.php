@@ -13,3 +13,4 @@ class JsonApiNotFoundException extends JsonApiBaseException
         return Response::HTTP_NOT_FOUND;
     }
 }
+
