@@ -1,18 +1,15 @@
-<?php 
+<?php
+
 declare(strict_types=1);
 namespace Homeapp\JsonApi\Exception;
 
 use Symfony\Component\Asset\Exception\InvalidArgumentException;
 use Symfony\Component\HttpFoundation\Response;
 
-class JsonApiUnsupportedMediaTypeException extends InvalidArgumentException
+class JsonApiUnsupportedMediaTypeException extends JsonApiBaseException
 {
-    public static function create(string $message): self
+    protected static function getHttpCode(): int
     {
-        $exception = new self();
-        $exception->message = $message;
-        $exception->code = Response::HTTP_UNSUPPORTED_MEDIA_TYPE;
-
-        return $exception;
+        return Response::HTTP_UNSUPPORTED_MEDIA_TYPE;
     }
 }
