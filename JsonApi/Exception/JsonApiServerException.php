@@ -13,3 +13,4 @@ class JsonApiServerException extends JsonApiBaseException
         return Response::HTTP_INTERNAL_SERVER_ERROR;
     }
 }
+
