@@ -56,6 +56,12 @@ class Attributes implements AttributesInterface
      */
     public ?string $house = null;
 
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $kladrCode = null;
+
     public function __construct(string $fullAddress, float $lat, float $lng)
     {
         $this->fullAddress = $fullAddress;
