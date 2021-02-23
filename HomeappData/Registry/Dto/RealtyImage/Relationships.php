@@ -18,8 +18,17 @@ class Relationships implements RelationshipsInterface
      */
     public RelationshipsBlockSingle $image;
 
-    public function __construct(ResourceIdentifierObject $image)
+    /**
+     * НЕ обязательное, для обратной совместмости пакета. Нужно будет потом сделать обязательным.
+     * @var RelationshipsBlockSingle|null
+     * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockSingle")
+     * @Serializer\Groups({"API"})
+     */
+    public ?RelationshipsBlockSingle $realty = null;
+
+    public function __construct(ResourceIdentifierObject $image, ?ResourceIdentifierObject $realty = null)
     {
         $this->image = new RelationshipsBlockSingle($image);
+        $this->realty = new RelationshipsBlockSingle($realty);
     }
 }

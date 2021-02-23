@@ -5,14 +5,10 @@ namespace Homeapp\JsonApi\Exception;
 use Symfony\Component\Asset\Exception\InvalidArgumentException;
 use Symfony\Component\HttpFoundation\Response;
 
-class JsonApiNotAcceptableException extends InvalidArgumentException
+class JsonApiNotAcceptableException extends JsonApiBaseException
 {
-    public static function create(string $message): self
+    protected static function getHttpCode(): int
     {
-        $exception = new self();
-        $exception->message = $message;
-        $exception->code = Response::HTTP_NOT_ACCEPTABLE;
-
-        return $exception;
+        return Response::HTTP_NOT_ACCEPTABLE;
     }
 }
