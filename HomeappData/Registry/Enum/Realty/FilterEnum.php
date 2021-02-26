@@ -16,6 +16,9 @@ class FilterEnum
     public const PRICE       = 'price';
     public const COORDINATES = 'coordinates';
     public const HAS_PINNED_IMAGE  = 'hasPinnedImage';
+    public const FULL_ADDRESS = 'address.fullAddress';
+    public const ROOM_COUNT   = 'roomCount';
+    public const FLOOR        = 'floor';
 
     public static function getNames(): array
     {
@@ -29,6 +32,9 @@ class FilterEnum
             self::PRICE       => 'диапазон цен',
             self::COORDINATES => 'координаты',
             self::HAS_PINNED_IMAGE  => 'картинки',
+            self::FULL_ADDRESS => 'полный адрес',
+            self::ROOM_COUNT   => 'колличество комнат',
+            self::FLOOR        => 'этаж',
         ];
     }
 }
