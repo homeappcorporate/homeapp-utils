@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -20,6 +20,7 @@ class IncludeEnum
     public static function getNames(): array
     {
         return [
+            self::ADDRESS => 'address',
             self::ADDRESS_BTI => 'address.bti',
             self::COMPLEX => 'complex',
             self::REALTY_METRO => 'metroDistance.metroStation',
