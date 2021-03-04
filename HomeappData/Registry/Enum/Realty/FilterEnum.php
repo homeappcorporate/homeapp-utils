@@ -8,6 +8,8 @@ namespace Homeapp\HomeappData\Registry\Enum\Realty;
 class FilterEnum
 {
     public const ID_LIST     = 'id';
+    public const UPDATED_AT  = 'updatedAt';
+    public const CREATED_AT  = 'createdAt';
     public const REALTY_TYPE = 'realtyType';
     public const DISTRICT    = 'district';
     public const CITY_AREA   = 'cityArea';
@@ -24,6 +26,8 @@ class FilterEnum
     {
         return [
             self::ID_LIST     => 'список id',
+            self::UPDATED_AT  => 'дата обновления',
+            self::CREATED_AT  => 'дата создания',
             self::REALTY_TYPE => 'тип',
             self::DISTRICT    => 'район',
             self::CITY_AREA   => 'административный округ',
