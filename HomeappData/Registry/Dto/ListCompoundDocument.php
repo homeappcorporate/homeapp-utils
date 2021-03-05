@@ -13,27 +13,25 @@ use JMS\Serializer\Annotation as Serializer;
 
 /**
  * CompoundDocument в терминах JsonApi. Для списков.
- *
- * @property-read ResourceObject[] $data
- * @property-read ResourceObject[] $included
- *
- * @property-read null|Meta $meta
  */
 class ListCompoundDocument implements JsonApiDocumentBodyInterface
 {
     /**
+     * @property-read
      * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
      * @Serializer\Groups({"API"})
      */
     public array $data;
 
     /**
+     * @property-read
      * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\ResourceObject>")
      * @Serializer\Groups({"API"})
      */
     public array $included = [];
 
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\JsonApi\Meta\Meta")
      * @Serializer\Groups({"API"})
      */
