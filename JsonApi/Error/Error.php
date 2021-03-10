@@ -22,11 +22,21 @@ class Error
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
+    public string $detail;
+
+    /**
+     * @deprecated по спеке должно быть detail. Это оставляю пока для обратной совместимости
+     * Подробное текстовое описание ошибки
+     * @var string
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
     public string $description;
 
-    public function __construct(string $description)
+    public function __construct(string $detail)
     {
-        $this->description = $description;
+        $this->detail = $detail;
+        $this->description = $detail;
     }
 
     public function withPointer(string $pointer): self
