@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Homeapp\HomeappData\Registry\Dto\Realty;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
-use Homeapp\JsonApi\Attributes\AttributesInterface;
-use Homeapp\JsonApi\Relationships\RelationshipsInterface;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
+use Homeapp\HomeappData\Registry\Dto\Realty\Attributes as Attributes;
+use Homeapp\HomeappData\Registry\Dto\Realty\Relationships as Relationships;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -26,9 +26,9 @@ class Data extends ResourceObject
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\Realty\Relationships")
      * @Serializer\Groups({"API"})
      */
-    public ?RelationshipsInterface $relationships = null;
+    public ?Relationships $relationships = null;
 
-    public function __construct(?string $id, ?AttributesInterface $attributes, ?RelationshipsInterface $relationships)
+    public function __construct(?string $id, ?Attributes $attributes, ?Relationships $relationships)
     {
         parent::__construct($id, EntityNameEnum::REALTY);
         $this->attributes = $attributes;

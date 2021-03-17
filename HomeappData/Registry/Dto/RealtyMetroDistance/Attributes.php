@@ -18,19 +18,19 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public int $distance;
+    public ?int $distance = null;
 
     /**
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public int $time;
+    public ?int $time = null;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public string $method;
+    public ?string $method = null;
 
     public function __construct(int $distance, int $time, string $method)
     {
