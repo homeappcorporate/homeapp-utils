@@ -30,13 +30,13 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $title = null;
+    public ?string $title;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $description = null;
+    public ?string $description;
 
     /**
      * @Serializer\Type("float")
@@ -54,13 +54,13 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public ?float $livingArea = null;
+    public ?float $livingArea;
 
     /**
      * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public ?float $kitchenArea = null;
+    public ?float $kitchenArea;
 
     /**
      * @Serializer\Type("int")
@@ -74,75 +74,75 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("int")
      * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
      */
-    public ?int $floorCount = null;
+    public ?int $floorCount;
 
     /**
      * @var float[]
      * @Serializer\Type("array<float>")
      * @Serializer\Groups({"API"})
      */
-    public array $rooms = [];
+    public array $rooms;
 
     /**
      * @var ToiletDto[]
      * @Serializer\Type("array<Homeapp\HomeappData\Registry\Dto\Realty\ToiletDto>")
      * @Serializer\Groups({"API"})
      */
-    public array $toilets = [];
+    public array $toilets;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $renovationType = null;
+    public ?string $renovationType;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasInternet = null;
+    public ?bool $hasInternet;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $isGuarded = null;
+    public ?bool $isGuarded;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $videoUrl = null;
+    public ?string $videoUrl;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasOnlineShowing = null;
+    public ?bool $hasOnlineShowing;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasMortgage = null;
+    public ?bool $hasMortgage;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasInstalment = null;
+    public ?bool $hasInstalment;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $dealType = null;
+    public ?string $dealType;
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\Groups({"API"})
+     * @Serializer\Groups({"USER"})
      */
-    public ?string $cadastralNumber = null;
+    public ?string $cadastralNumber;
 
     //========================== ТОЛЬКО ДЛЯ КВАРТИР =============================
 
@@ -150,99 +150,99 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public ?int $floor = null;
+    public ?int $floor;
 
     /**
      * @Serializer\Type("int")
      * @Serializer\Groups({"USER"})
      */
-    public ?int $flatNumber = null;
+    public ?int $flatNumber;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $flatKind = null;
+    public ?string $flatKind;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $flatType = null;
+    public ?string $flatType;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasFreeLayout = null;
+    public ?bool $hasFreeLayout;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasChangedLayout = null;
+    public ?bool $hasChangedLayout;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasGuardedParking = null;
+    public ?bool $hasGuardedParking;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasRamp = null;
+    public ?bool $hasRamp;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasGarbageChute = null;
+    public ?bool $hasGarbageChute;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasConcierge = null;
+    public ?bool $hasConcierge;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasPrivateYard = null;
+    public ?bool $hasPrivateYard;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $parkingType = null;
+    public ?string $parkingType;
 
     /**
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public ?int $balconyCount = null;
+    public ?int $balconyCount;
 
     /**
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public ?int $loggiaCount = null;
+    public ?int $loggiaCount;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $windowView = null;
+    public ?string $windowView;
 
     //========================== только для новостроек =============================
 
     /**
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\Realty\DduOwnerDto")
-     * @Serializer\Groups({"API"})
+     * @Serializer\Groups({"USER"})
      */
-    public ?DduOwnerDto $dduOwner = null;
+    public ?DduOwnerDto $dduOwner;
 
     //========================== ТОЛЬКО ДЛЯ ДОМОВ =============================
 
@@ -250,151 +250,151 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $houseType = null;
+    public ?string $houseType;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $communityName = null;
+    public ?string $communityName;
 
     /**
      * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public ?float $ceilingHeight = null;
+    public ?float $ceilingHeight;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $wallsMaterial = null;
+    public ?string $wallsMaterial;
 
     /**
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public ?int $bedroomCount = null;
+    public ?int $bedroomCount;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $isResidence = null;
+    public ?bool $isResidence;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $electricity = null;
+    public ?string $electricity;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $gas = null;
+    public ?string $gas;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $sewerage = null;
+    public ?string $sewerage;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $plumbing = null;
+    public ?string $plumbing;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $heating = null;
+    public ?string $heating;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasPool = null;
+    public ?bool $hasPool;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasBathhouse = null;
+    public ?bool $hasBathhouse;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasSauna = null;
+    public ?bool $hasSauna;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $hasGarage = null;
+    public ?bool $hasGarage;
 
     /**
      * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public ?float $landArea = null;
+    public ?float $landArea;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"USER"})
      */
-    public ?string $landCadastralNumber = null;
+    public ?string $landCadastralNumber;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $shareSize = null;
+    public ?string $shareSize;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $landUsageType = null;
+    public ?string $landUsageType;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $landPurpose = null;
+    public ?string $landPurpose;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $landShape = null;
+    public ?string $landShape;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $relief = null;
+    public ?string $relief;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public ?string $furniture = null;
+    public ?string $furniture;
 
     /**
      * @Serializer\Type("float")
      * @Serializer\Groups({"API"})
      */
-    public ?float $cityDistance = null;
+    public ?float $cityDistance;
 
     /**
      * @Serializer\Type("boolean")
      * @Serializer\Groups({"API"})
      */
-    public ?bool $burden = null;
+    public ?bool $burden;
 
     public function __construct(
         string $realtyType,

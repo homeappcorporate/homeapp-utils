@@ -16,6 +16,7 @@ class MetaConsistencyItem
     public string $message;
 
     /**
+     * @var string[]
      * @Serializer\Type("array<string>")
      * @Serializer\Groups({"API"})
      */
