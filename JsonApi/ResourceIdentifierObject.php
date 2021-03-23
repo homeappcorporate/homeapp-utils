@@ -16,13 +16,13 @@ class ResourceIdentifierObject implements ResourceInterface
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public string $id;
+    public ?string $id = null;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public string $type;
+    public ?string $type = null;
 
     /**
      * @param string $id

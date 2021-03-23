@@ -49,12 +49,16 @@ abstract class ResourceObject implements ResourceInterface, ResourceObjectInterf
         $this->type = $type;
     }
 
-    public function addConsistencyData(string $message): void
+    /**
+     * @param string $message
+     * @param string[] $fields
+     */
+    public function addConsistencyData(string $message, array $fields = []): void
     {
         if ($this->meta === null) {
             $this->meta = new Meta\ResourceObjectMeta();
         }
-        $this->meta->consistency[] = new Meta\MetaConsistencyItem($message);
+        $this->meta->consistency[] = new Meta\MetaConsistencyItem($message, $fields);
     }
 
     public function redefineMeta(Meta\ResourceObjectMeta $clientMeta): void

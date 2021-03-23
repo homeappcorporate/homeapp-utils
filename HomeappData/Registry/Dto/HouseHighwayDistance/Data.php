@@ -6,6 +6,8 @@ namespace Homeapp\HomeappData\Registry\Dto\HouseHighwayDistance;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
+use Homeapp\HomeappData\Registry\Dto\HouseHighwayDistance\Attributes as Attributes;
+use Homeapp\HomeappData\Registry\Dto\HouseHighwayDistance\Relationships as Relationships;
 use JMS\Serializer\Annotation as Serializer;
 
 class Data extends ResourceObject
