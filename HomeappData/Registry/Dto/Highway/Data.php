@@ -6,6 +6,7 @@ namespace Homeapp\HomeappData\Registry\Dto\Highway;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
+use Homeapp\HomeappData\Registry\Dto\Highway\Attributes as Attributes;
 use JMS\Serializer\Annotation as Serializer;
 
 class Data extends ResourceObject

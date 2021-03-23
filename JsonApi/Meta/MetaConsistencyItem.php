@@ -15,8 +15,16 @@ class MetaConsistencyItem
      */
     public string $message;
 
-    public function __construct(string $message)
+    /**
+     * @var string[]
+     * @Serializer\Type("array<string>")
+     * @Serializer\Groups({"API"})
+     */
+    public array $fields = [];
+
+    public function __construct(string $message, array $fields = [])
     {
         $this->message = $message;
+        $this->fields = $fields;
     }
 }

@@ -6,6 +6,7 @@ namespace Homeapp\HomeappData\Registry\Dto\District;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
+use Homeapp\HomeappData\Registry\Dto\District\Attributes as Attributes;
 use JMS\Serializer\Annotation as Serializer;
 
 class Data extends ResourceObject
