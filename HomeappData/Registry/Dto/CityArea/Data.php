@@ -9,12 +9,10 @@ use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
 use Homeapp\HomeappData\Registry\Dto\CityArea\Attributes as Attributes;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * @property-read null|Attributes $attributes;
- */
 class Data extends ResourceObject
 {
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\CityArea\Attributes")
      * @Serializer\Groups({"API"})
      */

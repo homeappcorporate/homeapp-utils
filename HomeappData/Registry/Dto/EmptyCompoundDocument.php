@@ -10,12 +10,11 @@ use JMS\Serializer\Annotation as Serializer;
 
 /**
  * CompoundDocument в терминах JsonApi
- *
- * @property-read null $data
  */
 class EmptyCompoundDocument implements JsonApiDocumentBodyInterface
 {
     /**
+     * @property-read
      * @Serializer\Type("integer")
      * @Serializer\Groups({"API"})
      */

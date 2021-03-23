@@ -10,12 +10,10 @@ use Homeapp\HomeappData\Registry\Dto\AddressBti\Attributes as Attributes;
 use Homeapp\HomeappData\Registry\Dto\AddressBti\Relationships as Relationships;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * @property-read null|Attributes $attributes;
- */
 class Data extends ResourceObject
 {
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\AddressBti\Attributes")
      * @Serializer\Groups({"API"})
      */

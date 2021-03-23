@@ -10,19 +10,17 @@ use Homeapp\HomeappData\Registry\Dto\AddressMetroDistance\Attributes as Attribut
 use Homeapp\HomeappData\Registry\Dto\AddressMetroDistance\Relationships as Relationships;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * @property-read null|Attributes $attributes;
- * @property-read null|Relationships $relationships;
- */
 class Data extends ResourceObject
 {
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\AddressMetroDistance\Attributes")
      * @Serializer\Groups({"API"})
      */
     public ?Attributes $attributes = null;
 
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\AddressMetroDistance\Relationships")
      * @Serializer\Groups({"API"})
      */

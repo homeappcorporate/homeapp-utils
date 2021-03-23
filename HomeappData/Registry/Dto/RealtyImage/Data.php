@@ -10,19 +10,17 @@ use Homeapp\HomeappData\Registry\Dto\RealtyImage\Attributes as Attributes;
 use Homeapp\HomeappData\Registry\Dto\RealtyImage\Relationships as Relationships;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * @property-read null|Attributes $attributes;
- * @property-read null|Relationships $relationships;
- */
 class Data extends ResourceObject
 {
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\RealtyImage\Attributes")
      * @Serializer\Groups({"API"})
      */
     public ?Attributes $attributes = null;
 
     /**
+     * @property-read
      * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\RealtyImage\Relationships")
      * @Serializer\Groups({"API"})
      */
