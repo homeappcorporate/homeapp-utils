@@ -248,19 +248,19 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    private ?int $deliveryYear = null;
+    public ?int $deliveryYear = null;
 
     /**
      * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    private ?int $deliveryQuarter = null;
+    public ?int $deliveryQuarter = null;
 
     /**
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
-    private ?bool $isDelivered = null;
+    public ?bool $isDelivered = null;
 
     //========================== ТОЛЬКО ДЛЯ ДОМОВ =============================
 
