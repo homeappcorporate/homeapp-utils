@@ -5,6 +5,12 @@ namespace Homeapp\JsonApi;
 interface ResourceObjectInterface
 {
     /**
+     * @param string $description
+     * @param string $pointer
+     */
+    public function addError(string $description, string $pointer): void;
+
+    /**
      * @param string $message
      * @param string[] $fields
      */
