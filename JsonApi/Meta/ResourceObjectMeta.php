@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Homeapp\JsonApi\Meta;
 
 use DateTimeImmutable;
+use Homeapp\JsonApi\Error\Error;
 use JMS\Serializer\Annotation as Serializer;
 
 class ResourceObjectMeta
@@ -15,6 +16,13 @@ class ResourceObjectMeta
      * @Serializer\Groups({"API"})
      */
     public ?array $consistency = null;
+
+    /**
+     * @var null|Error[]
+     * @Serializer\Type("array<Homeapp\JsonApi\Error\Error>")
+     * @Serializer\Groups({"API"})
+     */
+    public ?array $errors = null;
 
     /**
      * @Serializer\Groups({"API"})
