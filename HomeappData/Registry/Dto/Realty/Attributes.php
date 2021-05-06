@@ -244,6 +244,24 @@ class Attributes implements AttributesInterface
      */
     public ?DduOwnerDto $dduOwner;
 
+    /**
+     * @Serializer\Type("int")
+     * @Serializer\Groups({"API"})
+     */
+    public ?int $deliveryYear = null;
+
+    /**
+     * @Serializer\Type("int")
+     * @Serializer\Groups({"API"})
+     */
+    public ?int $deliveryQuarter = null;
+
+    /**
+     * @Serializer\Type("bool")
+     * @Serializer\Groups({"API"})
+     */
+    public ?bool $isDelivered = null;
+
     //========================== ТОЛЬКО ДЛЯ ДОМОВ =============================
 
     /**
