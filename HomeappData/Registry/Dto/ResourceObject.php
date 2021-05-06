@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Homeapp\HomeappData\Registry\Dto;
 
+use Homeapp\JsonApi\Error\Error;
 use Homeapp\JsonApi\Meta;
 use Homeapp\JsonApi\ResourceInterface;
 use Homeapp\JsonApi\ResourceObjectInterface;
@@ -47,6 +48,23 @@ abstract class ResourceObject implements ResourceInterface, ResourceObjectInterf
     {
         $this->id = $id;
         $this->type = $type;
+    }
+
+    /**
+     * @param string $description
+     * @param string $pointer
+     */
+    public function addError(string $description, string $pointer): void
+    {
+        if ($this->meta === null) {
+            $this->meta = new Meta\ResourceObjectMeta();
+        }
+
+        $error = new Error($description);
+        if ($pointer !== null) {
+            $error->withPointer($pointer);
+        }
+        $this->meta->errors[] = $error;
     }
 
     /**
