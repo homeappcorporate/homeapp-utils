@@ -87,6 +87,7 @@ abstract class ResourceObject implements ResourceInterface, ResourceObjectInterf
 
         $clientMeta->consistency = $this->meta->consistency;
         $clientMeta->updatedAt = $this->meta->updatedAt;
+        $clientMeta->errors = $this->meta->errors;
         $this->meta = $clientMeta;
     }
 }
