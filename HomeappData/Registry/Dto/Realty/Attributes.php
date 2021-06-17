@@ -144,6 +144,18 @@ class Attributes implements AttributesInterface
      */
     public ?string $cadastralNumber;
 
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public string $infrastructure;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public string $documents;
+
     //========================== ТОЛЬКО ДЛЯ КВАРТИР =============================
 
     /**
