@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Installation: ln -s `pwd`/build/git/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+
+cd . && vendor/bin/phpcs --severity=6

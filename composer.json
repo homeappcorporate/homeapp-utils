@@ -5,11 +5,14 @@
     "description": "UtilsBundle",
     "autoload": {
         "psr-4": {
-            "Homeapp\\UtilsBundle\\": "UtilsBundle/src/"
+            "Homeapp\\UtilsBundle\\": "UtilsBundle/src/",
+            "Homeapp\\JsonApi\\": "JsonApi/",
+            "Homeapp\\HomeappData\\": "HomeappData/"
         }
     },
     "require": {
-        "php": "^7.1.3"
+        "php": "^7.4",
+        "ext-json": "*"
     },
     "require-dev": {
         "jms/serializer-bundle": "^3.2",
