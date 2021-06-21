@@ -148,13 +148,13 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public string $infrastructure;
+    public ?string $infrastructure;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\Groups({"API"})
      */
-    public string $documents;
+    public ?string $documents;
 
     //========================== ТОЛЬКО ДЛЯ КВАРТИР =============================
 
