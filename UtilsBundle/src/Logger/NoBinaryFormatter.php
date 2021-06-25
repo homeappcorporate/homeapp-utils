@@ -14,8 +14,12 @@ class NoBinaryFormatter extends MessageFormatter
         \Exception $error = null
     ) {
         if ($response !== null) {
-            $body = (string) $response->getBody();
-            if (false === mb_detect_encoding($body, 'UTF-8', true)) {
+            $body = $response->getBody();
+            $bodyString = (string) $body;
+            if ($body->isSeekable()) {
+                $body->seek(0);
+            }
+            if (false === mb_detect_encoding($bodyString, 'UTF-8', true)) {
                 $stream = new BufferStream();
                 $stream->write('-------- Binary data -------');
                 $response = $response->withBody($stream);
