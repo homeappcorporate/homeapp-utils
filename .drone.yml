@@ -1,5 +1,5 @@
 kind: pipeline
-name: base
+name: composer-validate
 type: docker
 
 steps:
