@@ -1,0 +1,16 @@
+kind: pipeline
+name: base
+type: docker
+
+steps:
+  - name: cli
+    image: php:7.4-cli
+    pull: if-not-exists
+    entrypoint: [ /bin/bash ]
+    commands:
+      - cd /drone/src/
+      - composer install --prefer-dist -o -a -n -q > /dev/null
+
+trigger:
+  event:
+    - push
