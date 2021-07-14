@@ -1,12 +1,11 @@
 kind: pipeline
 name: composer-validate
-type: docker
+type: kubernetes
 
 steps:
   - name: validate
     image: php:7.4-cli
     pull: if-not-exists
-    entrypoint: [ /bin/bash ]
     commands:
       - cd /drone/src/
       - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -17,7 +16,6 @@ steps:
   - name: install
     image: php:7.4-cli
     pull: if-not-exists
-    entrypoint: [ /bin/bash ]
     commands:
       - apt-get update && apt-get install git -yqq
       - cd /drone/src/
