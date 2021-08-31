@@ -470,16 +470,19 @@ class Attributes implements AttributesInterface
         int $roomCount,
         int $price,
         array $rooms = [],
-        array $toilets = []
+        array $toilets = [],
+        ?int $additionalPrice = null,
+        ?string $additionalPriceCurrency = null
     ): self {
-        $attr = new self(
+        return new self(
             $realtyType,
             $area,
             $roomCount,
-            $price
+            $price,
+            $rooms,
+            $toilets,
+            $additionalPrice,
+            $additionalPriceCurrency
         );
-        $attr->rooms = $rooms;
-        $attr->toilets = $toilets;
-        return $attr;
     }
 }
