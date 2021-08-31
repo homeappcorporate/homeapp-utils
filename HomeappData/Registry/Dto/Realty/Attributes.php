@@ -130,6 +130,12 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("bool")
      * @Serializer\Groups({"API"})
      */
+    public bool $isSberDiscountRequested = true;
+
+    /**
+     * @Serializer\Type("bool")
+     * @Serializer\Groups({"API"})
+     */
     public ?bool $hasInstalment;
 
     /**
