@@ -74,6 +74,18 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("int")
      * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
      */
+    public ?int $additionalPrice;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
+     */
+    public ?string $additionalPriceCurrency;
+
+    /**
+     * @Serializer\Type("int")
+     * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
+     */
     public ?int $floorCount;
 
     /**
@@ -438,7 +450,9 @@ class Attributes implements AttributesInterface
         int $roomCount,
         int $price,
         array $rooms = [],
-        array $toilets = []
+        array $toilets = [],
+        ?int $additionalPrice = null,
+        ?string $additionalPriceCurrency = null
     ) {
         $this->realtyType = $realtyType;
         $this->area = $area;
@@ -446,6 +460,8 @@ class Attributes implements AttributesInterface
         $this->price = $price;
         $this->rooms = $rooms;
         $this->toilets = $toilets;
+        $this->additionalPrice = $additionalPrice;
+        $this->additionalPriceCurrency = $additionalPriceCurrency;
     }
 
     public static function createWithAllProps(
