@@ -450,9 +450,7 @@ class Attributes implements AttributesInterface
         int $roomCount,
         int $price,
         array $rooms = [],
-        array $toilets = [],
-        ?int $additionalPrice = null,
-        ?string $additionalPriceCurrency = null
+        array $toilets = []
     ) {
         $this->realtyType = $realtyType;
         $this->area = $area;
@@ -460,8 +458,6 @@ class Attributes implements AttributesInterface
         $this->price = $price;
         $this->rooms = $rooms;
         $this->toilets = $toilets;
-        $this->additionalPrice = $additionalPrice;
-        $this->additionalPriceCurrency = $additionalPriceCurrency;
     }
 
     public static function createWithAllProps(
