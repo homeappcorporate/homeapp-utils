@@ -470,9 +470,7 @@ class Attributes implements AttributesInterface
         int $roomCount,
         int $price,
         array $rooms = [],
-        array $toilets = [],
-        ?int $additionalPrice = null,
-        ?string $additionalPriceCurrency = null
+        array $toilets = []
     ): self {
         return new self(
             $realtyType,
@@ -480,9 +478,7 @@ class Attributes implements AttributesInterface
             $roomCount,
             $price,
             $rooms,
-            $toilets,
-            $additionalPrice,
-            $additionalPriceCurrency
+            $toilets
         );
     }
 }
