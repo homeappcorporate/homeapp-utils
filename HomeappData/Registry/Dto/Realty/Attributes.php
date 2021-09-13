@@ -74,6 +74,18 @@ class Attributes implements AttributesInterface
      * @Serializer\Type("int")
      * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
      */
+    public ?int $additionalPrice;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
+     */
+    public ?string $additionalPriceCurrency;
+
+    /**
+     * @Serializer\Type("int")
+     * @Serializer\Groups({"API", "FULL_INFO", "SUGGEST"})
+     */
     public ?int $floorCount;
 
     /**
@@ -456,14 +468,13 @@ class Attributes implements AttributesInterface
         array $rooms = [],
         array $toilets = []
     ): self {
-        $attr = new self(
+        return new self(
             $realtyType,
             $area,
             $roomCount,
-            $price
+            $price,
+            $rooms,
+            $toilets
         );
-        $attr->rooms = $rooms;
-        $attr->toilets = $toilets;
-        return $attr;
     }
 }
