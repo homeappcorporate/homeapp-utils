@@ -24,6 +24,12 @@ class Relationships implements RelationshipsInterface
     public ?RelationshipsBlockSingle $complex = null;
 
     /**
+     * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockSingle")
+     * @Serializer\Groups({"API"})
+     */
+    public ?RelationshipsBlockSingle $complexHousing = null;
+
+    /**
      * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockMultiple")
      * @Serializer\Groups({"API"})
      */
