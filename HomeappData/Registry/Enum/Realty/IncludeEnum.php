@@ -12,6 +12,7 @@ class IncludeEnum
     public const ADDRESS = 'address';
     public const ADDRESS_BTI = 'address.bti';
     public const COMPLEX = 'complex';
+    public const COMPLEX_HOUSING = 'complexHousing';
     public const REALTY_METRO = 'metroDistance.metroStation';
     public const ADDRESS_METRO = 'address.metroDistance.metroStation';
     public const HIGHWAYS = 'highwayDistance.highway';
@@ -24,6 +25,7 @@ class IncludeEnum
             self::ADDRESS => 'address',
             self::ADDRESS_BTI => 'address.bti',
             self::COMPLEX => 'complex',
+            self::COMPLEX_HOUSING => 'complexHousing',
             self::REALTY_METRO => 'metroDistance.metroStation',
             self::ADDRESS_METRO => 'address.metroDistance.metroStation',
             self::HIGHWAYS => 'highwayDistance.highway',

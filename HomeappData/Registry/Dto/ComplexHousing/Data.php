@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\HomeappData\Registry\Dto\Complex;
+namespace Homeapp\HomeappData\Registry\Dto\ComplexHousing;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
@@ -20,7 +20,7 @@ class Data extends ResourceObject
 
     /**
      * @property-read
-     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\Complex\Relationships")
+     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\ComplexHousing\Relationships")
      * @Serializer\Groups({"API"})
      */
     public ?Relationships $relationships = null;
