@@ -174,6 +174,12 @@ class Attributes implements AttributesInterface
      */
     public ?string $documents;
 
+    /**
+     * @Serializer\Type("bool")
+     * @Serializer\Groups({"API"})
+     */
+    public bool $isHomeapp;
+
     //========================== ТОЛЬКО ДЛЯ КВАРТИР =============================
 
     /**
