@@ -15,6 +15,7 @@ class EntityNameEnum
     public const METRO_STATION = 'metroStation';
     public const HOUSE_HIGHWAY_DISTANCE = 'houseHighwayDistance';
     public const HIGHWAY = 'highway';
+    public const EXTERNAL_LINK = 'externalLink';
     public const DISTRICT = 'district';
     public const CITY_AREA = 'cityArea';
 
@@ -32,6 +33,7 @@ class EntityNameEnum
             self::METRO_STATION => 'Станция метро',
             self::HOUSE_HIGHWAY_DISTANCE => 'Расстояние от дома до города по трассе',
             self::HIGHWAY => 'Трасса',
+            self::EXTERNAL_LINK => 'Ссылка на площадку',
             self::DISTRICT => 'Район',
             self::CITY_AREA => 'Административный округ',
         ];

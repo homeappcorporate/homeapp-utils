@@ -16,6 +16,7 @@ class IncludeEnum
     public const ADDRESS_METRO = 'address.metroDistance.metroStation';
     public const HIGHWAYS = 'highwayDistance.highway';
     public const IMAGES = 'realtyImage.image';
+    public const EXTERNAL_LINK = 'externalLink';
 
     public static function getNames(): array
     {
@@ -27,6 +28,7 @@ class IncludeEnum
             self::ADDRESS_METRO => 'address.metroDistance.metroStation',
             self::HIGHWAYS => 'highwayDistance.highway',
             self::IMAGES => 'realtyImage.image',
+            self::EXTERNAL_LINK => 'externalLink',
         ];
     }
 }
