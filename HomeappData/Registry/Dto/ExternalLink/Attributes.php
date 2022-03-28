@@ -15,8 +15,15 @@ class Attributes implements AttributesInterface
      */
     public string $url;
 
-    public function __construct(string $url)
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public string $source;
+
+    public function __construct(string $url, string $source)
     {
         $this->url = $url;
+        $this->source = $source;
     }
 }
