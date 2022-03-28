@@ -444,6 +444,12 @@ class Attributes implements AttributesInterface
      */
     public ?bool $burden;
 
+    /**
+     * @Serializer\Type("boolean")
+     * @Serializer\Groups({"API"})
+     */
+    public ?bool $isPresentationReady;
+
     public function __construct(
         string $realtyType,
         float $area,
