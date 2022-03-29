@@ -6,14 +6,13 @@ namespace Homeapp\HomeappData\Registry\Dto\ComplexHousing;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
-use Homeapp\HomeappData\Registry\Dto\Complex\Attributes as Attributes;
 use JMS\Serializer\Annotation as Serializer;
 
 class Data extends ResourceObject
 {
     /**
      * @property-read
-     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\Complex\Attributes")
+     * @Serializer\Type("Homeapp\HomeappData\Registry\Dto\ComplexHousing\Attributes")
      * @Serializer\Groups({"API"})
      */
     public ?Attributes $attributes = null;
@@ -25,9 +24,10 @@ class Data extends ResourceObject
      */
     public ?Relationships $relationships = null;
 
-    public function __construct(?string $id, ?Attributes $attributes)
+    public function __construct(?string $id, ?Attributes $attributes, ?Relationships $relationships = null)
     {
-        parent::__construct($id, EntityNameEnum::COMPLEX);
+        parent::__construct($id, EntityNameEnum::COMPLEX_HOUSING);
         $this->attributes = $attributes;
+        $this->relationships = $relationships;
     }
 }

@@ -6,7 +6,6 @@ namespace Homeapp\HomeappData\Registry\Dto\Complex;
 
 use Homeapp\HomeappData\Registry\Dto\ResourceObject;
 use Homeapp\HomeappData\Registry\Enum\EntityNameEnum;
-use Homeapp\HomeappData\Registry\Dto\Complex\Attributes as Attributes;
 use JMS\Serializer\Annotation as Serializer;
 
 class Data extends ResourceObject
@@ -25,9 +24,10 @@ class Data extends ResourceObject
      */
     public ?Relationships $relationships = null;
 
-    public function __construct(?string $id, ?Attributes $attributes)
+    public function __construct(?string $id, ?Attributes $attributes, ?Relationships $relationships = null)
     {
         parent::__construct($id, EntityNameEnum::COMPLEX);
         $this->attributes = $attributes;
+        $this->relationships = $relationships;
     }
 }
