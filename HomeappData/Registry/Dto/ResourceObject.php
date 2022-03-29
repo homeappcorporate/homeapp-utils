@@ -28,6 +28,7 @@ use JMS\Serializer\Annotation as Serializer;
  *    "realty": "Homeapp\HomeappData\Registry\Dto\Realty\Data",
  *    "realtyImage": "Homeapp\HomeappData\Registry\Dto\RealtyImage\Data",
  *    "realtyMetroDistance": "Homeapp\HomeappData\Registry\Dto\RealtyMetroDistance\Data",
+ *    "externalLink": "Homeapp\HomeappData\Registry\Dto\ExternalLink\Data",
  * }, groups={"API"})
  */
 abstract class ResourceObject implements ResourceInterface, ResourceObjectInterface
