@@ -18,6 +18,13 @@ class ResourceObjectMeta
     public ?array $consistency = null;
 
     /**
+     * @var MetaConsistencyItem[]
+     * @Serializer\Type("array<Homeapp\JsonApi\Meta\MetaConsistencyItem>")
+     * @Serializer\Groups({"API"})
+     */
+    public ?array $presentation = null;
+
+    /**
      * @var null|Error[]
      * @Serializer\Type("array<Homeapp\JsonApi\Error\Error>")
      * @Serializer\Groups({"API"})
