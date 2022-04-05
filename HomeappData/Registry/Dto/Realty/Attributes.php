@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Homeapp\HomeappData\Registry\Dto\Realty;
 
+use DateTimeImmutable;
 use Homeapp\JsonApi\Attributes\AttributesInterface;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -179,6 +180,12 @@ class Attributes implements AttributesInterface
      * @Serializer\Groups({"API"})
      */
     public bool $isHomeapp;
+
+    /**
+     * @Serializer\Groups({"API"})
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
+     */
+    public ?DateTimeImmutable $soldAt = null;
 
     //========================== ТОЛЬКО ДЛЯ КВАРТИР =============================
 

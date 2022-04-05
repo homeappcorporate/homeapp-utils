@@ -28,5 +28,11 @@ class ResourceObjectMeta
      * @Serializer\Groups({"API"})
      * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
      */
+    public ?DateTimeImmutable $createdAt = null;
+
+    /**
+     * @Serializer\Groups({"API"})
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
+     */
     public ?DateTimeImmutable $updatedAt = null;
 }
