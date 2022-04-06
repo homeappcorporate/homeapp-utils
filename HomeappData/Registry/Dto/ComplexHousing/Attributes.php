@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\HomeappData\Registry\Dto\Complex;
+namespace Homeapp\HomeappData\Registry\Dto\ComplexHousing;
 
 use Homeapp\JsonApi\Attributes\AttributesInterface;
 use JMS\Serializer\Annotation as Serializer;
