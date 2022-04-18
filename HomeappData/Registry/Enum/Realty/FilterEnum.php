@@ -21,6 +21,7 @@ class FilterEnum
     public const FULL_ADDRESS = 'address.fullAddress';
     public const ROOM_COUNT   = 'roomCount';
     public const FLOOR        = 'floor';
+    public const IS_MERGED_OR_HAS_SERVICE_REQUEST_EXT_ID = 'isMergesOrHasServiceRequestExtId';
 
     public static function getNames(): array
     {
@@ -39,6 +40,7 @@ class FilterEnum
             self::FULL_ADDRESS => 'полный адрес',
             self::ROOM_COUNT   => 'колличество комнат',
             self::FLOOR        => 'этаж',
+            self::IS_MERGED_OR_HAS_SERVICE_REQUEST_EXT_ID        => 'смержен, либо проставлен serviceRequestExtId',
         ];
     }
 }
