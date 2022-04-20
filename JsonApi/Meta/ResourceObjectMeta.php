@@ -48,4 +48,10 @@ class ResourceObjectMeta
      * @Serializer\Type("integer")
      */
     public ?int $serviceRequestExtId = null;
+
+    /**
+     * @Serializer\Groups({"API"})
+     * @Serializer\Type("bool")
+     */
+    public ?bool $isPresentationReady = null;
 }

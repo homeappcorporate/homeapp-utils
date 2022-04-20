@@ -104,6 +104,7 @@ abstract class ResourceObject implements ResourceInterface, ResourceObjectInterf
         $clientMeta->createdAt = $this->meta->createdAt;
         $clientMeta->updatedAt = $this->meta->updatedAt;
         $clientMeta->errors = $this->meta->errors;
+        $clientMeta->isPresentationReady = $this->meta->isPresentationReady;
         $this->meta = $clientMeta;
     }
 }
