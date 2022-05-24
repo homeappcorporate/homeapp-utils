@@ -18,6 +18,13 @@ class ResourceObjectMeta
     public ?array $consistency = null;
 
     /**
+     * @var MetaConsistencyItem[]
+     * @Serializer\Type("array<Homeapp\JsonApi\Meta\MetaConsistencyItem>")
+     * @Serializer\Groups({"API"})
+     */
+    public ?array $presentation = null;
+
+    /**
      * @var null|Error[]
      * @Serializer\Type("array<Homeapp\JsonApi\Error\Error>")
      * @Serializer\Groups({"API"})
@@ -41,4 +48,10 @@ class ResourceObjectMeta
      * @Serializer\Type("integer")
      */
     public ?int $serviceRequestExtId = null;
+
+    /**
+     * @Serializer\Groups({"API"})
+     * @Serializer\Type("bool")
+     */
+    public ?bool $isPresentationReady = null;
 }
