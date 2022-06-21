@@ -18,6 +18,7 @@ class IncludeEnum
     public const HIGHWAYS = 'highwayDistance.highway';
     public const IMAGES = 'realtyImage.image';
     public const EXTERNAL_LINK = 'externalLink';
+    public const HISTORY_PRICE = 'historyPrice';
 
     public static function getNames(): array
     {
@@ -31,6 +32,7 @@ class IncludeEnum
             self::HIGHWAYS => 'highwayDistance.highway',
             self::IMAGES => 'realtyImage.image',
             self::EXTERNAL_LINK => 'externalLink',
+            self::HISTORY_PRICE => 'historyPrice',
         ];
     }
 }
