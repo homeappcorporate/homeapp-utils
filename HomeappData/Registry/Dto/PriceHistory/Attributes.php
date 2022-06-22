@@ -8,16 +8,16 @@ use JMS\Serializer\Annotation as Serializer;
 class Attributes implements AttributesInterface
 {
     /**
-     * @Serializer\Type("string")
+     * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public ?string $oldPrice;
+    public ?int $oldPrice;
 
     /**
-     * @Serializer\Type("string")
+     * @Serializer\Type("int")
      * @Serializer\Groups({"API"})
      */
-    public ?string $newPrice;
+    public ?int $newPrice;
 
     /**
      * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
@@ -25,7 +25,7 @@ class Attributes implements AttributesInterface
      */
     public ?\DateTimeImmutable $dateCreated;
 
-    public function __construct(?string $oldPrice, ?string $newPrice, ?\DateTimeImmutable $dateCreated)
+    public function __construct(?int $oldPrice, ?int $newPrice, ?\DateTimeImmutable $dateCreated)
     {
         $this->oldPrice = $oldPrice;
         $this->newPrice = $newPrice;
