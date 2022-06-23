@@ -19,6 +19,7 @@ class EntityNameEnum
     public const EXTERNAL_LINK = 'externalLink';
     public const DISTRICT = 'district';
     public const CITY_AREA = 'cityArea';
+    public const PRICE_HISTORY = 'priceHistory';
 
     public static function getNames(): array
     {
@@ -38,6 +39,7 @@ class EntityNameEnum
             self::EXTERNAL_LINK => 'Ссылка на площадку',
             self::DISTRICT => 'Район',
             self::CITY_AREA => 'Административный округ',
+            self::PRICE_HISTORY => 'Изменение цены',
         ];
     }
 }
