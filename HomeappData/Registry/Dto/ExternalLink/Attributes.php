@@ -21,6 +21,24 @@ class Attributes implements AttributesInterface
      */
     public string $source;
 
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $contractorType = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $contractorPhone = null;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $contractorName = null;
+
     public function __construct(string $url, string $source)
     {
         $this->url = $url;
