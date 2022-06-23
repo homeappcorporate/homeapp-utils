@@ -53,6 +53,12 @@ class Relationships implements RelationshipsInterface
      */
     public ?RelationshipsBlockSingle $externalLink = null;
 
+    /**
+     * @Serializer\Type("Homeapp\JsonApi\Relationships\RelationshipsBlockSingle")
+     * @Serializer\Groups({"API"})
+     */
+    public ?RelationshipsBlockSingle $priceHistory = null;
+
     public function __construct(RelationshipsBlockSingle $address)
     {
         $this->address = $address;
