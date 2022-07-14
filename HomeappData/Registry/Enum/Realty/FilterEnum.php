@@ -21,6 +21,10 @@ class FilterEnum
     public const FULL_ADDRESS = 'address.fullAddress';
     public const ROOM_COUNT   = 'roomCount';
     public const FLOOR        = 'floor';
+    public const FLOORS_NUMBER = 'floorsNumber';
+    public const AREA         = 'area';
+    public const ADDRESS_ID   = 'address.id';
+    public const ACTIVE_OR_SOLD_AT = 'activeOrSoldAt';
     public const IS_MERGED_OR_HAS_SERVICE_REQUEST_EXT_ID = 'isMergesOrHasServiceRequestExtId';
 
     public static function getNames(): array
