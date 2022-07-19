@@ -22,6 +22,7 @@ class FilterEnum
     public const ADDRESS_ID   = 'address.id';
     public const FULL_ADDRESS = 'address.fullAddress';
     public const ROOM_COUNT   = 'roomCount';
+    public const HAS_FREE_LAYOUT   = 'hasFreeLayout';
     public const FLOOR        = 'floor';
     public const FLOOR_COUNT  = 'floorCount';
     public const ACTIVE_OR_SOLD_AT = 'activeOrSoldAt';
@@ -45,6 +46,7 @@ class FilterEnum
             self::ADDRESS_ID => 'id адреса',
             self::FULL_ADDRESS => 'полный адрес',
             self::ROOM_COUNT   => 'колличество комнат',
+            self::HAS_FREE_LAYOUT   => 'свободная планировка',
             self::FLOOR        => 'этаж',
             self::FLOOR_COUNT      => 'количество этажей в доме',
             self::ACTIVE_OR_SOLD_AT  => 'не продан или продан в диапозоне дат',
