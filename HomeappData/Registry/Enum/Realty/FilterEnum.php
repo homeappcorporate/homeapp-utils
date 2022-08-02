@@ -27,6 +27,7 @@ class FilterEnum
     public const FLOOR_COUNT  = 'floorCount';
     public const ACTIVE_OR_SOLD_AT = 'activeOrSoldAt';
     public const IS_MERGED_OR_HAS_SERVICE_REQUEST_EXT_ID = 'isMergesOrHasServiceRequestExtId';
+    public const FIRST_PUBLISHED_AT = 'firstPublishedAt';
 
     public static function getNames(): array
     {
@@ -51,6 +52,7 @@ class FilterEnum
             self::FLOOR_COUNT      => 'количество этажей в доме',
             self::ACTIVE_OR_SOLD_AT  => 'не продан или продан в диапозоне дат',
             self::IS_MERGED_OR_HAS_SERVICE_REQUEST_EXT_ID        => 'смержен, либо проставлен serviceRequestExtId',
+            self::FIRST_PUBLISHED_AT => 'дата первой публикации',
         ];
     }
 }
