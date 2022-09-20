@@ -54,4 +54,11 @@ class ResourceObjectMeta
      * @Serializer\Type("bool")
      */
     public ?bool $isPresentationReady = null;
+
+    /**
+     * Когда последний раз обновлялась информация, на основе которой был составлен запрос на PATCH
+     * @Serializer\Groups({"API"})
+     * @Serializer\Type("DateTimeImmutable<'Y-m-d H:i:s'>")
+     */
+    public ?DateTimeImmutable $refreshedAt = null;
 }
