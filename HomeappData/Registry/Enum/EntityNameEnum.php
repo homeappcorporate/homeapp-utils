@@ -9,6 +9,7 @@ class EntityNameEnum
     public const ADDRESS_BTI = 'addressBti';
     public const COMPLEX = 'complex';
     public const COMPLEX_HOUSING = 'complexHousing';
+    public const COTTAGE_COMPLEX = 'cottageComplex';
     public const REALTY_IMAGE = 'realtyImage';
     public const IMAGE = 'image';
     public const ADDRESS_METRO_DIST = 'addressMetroDistance';
@@ -29,6 +30,7 @@ class EntityNameEnum
             self::ADDRESS_BTI => 'БТИ параметры',
             self::COMPLEX => 'Жилой комплекс',
             self::COMPLEX_HOUSING => 'Корпус ЖК',
+            self::COTTAGE_COMPLEX => 'Коттеджный поселок',
             self::REALTY_IMAGE => 'Изображение объекта недвижимости',
             self::IMAGE => 'Изображение',
             self::ADDRESS_METRO_DIST => 'Расстояние от адреса до метра',

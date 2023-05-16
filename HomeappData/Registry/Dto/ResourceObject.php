@@ -21,6 +21,7 @@ use JMS\Serializer\Annotation as Serializer;
  *    "cityArea": "Homeapp\HomeappData\Registry\Dto\CityArea\Data",
  *    "complex": "Homeapp\HomeappData\Registry\Dto\Complex\Data",
  *    "complexHousing": "Homeapp\HomeappData\Registry\Dto\ComplexHousing\Data",
+ *    "cottageComplex": "Homeapp\HomeappData\Registry\Dto\CottageComplex\Data",
  *    "district": "Homeapp\HomeappData\Registry\Dto\District\Data",
  *    "highway": "Homeapp\HomeappData\Registry\Dto\Highway\Data",
  *    "houseHighwayDistance": "Homeapp\HomeappData\Registry\Dto\HouseHighwayDistance\Data",
