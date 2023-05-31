@@ -8,11 +8,8 @@ use Psr\Http\Message\ResponseInterface;
 
 class NoBinaryFormatter extends MessageFormatter
 {
-    public function format(
-        RequestInterface $request,
-        ResponseInterface $response = null,
-        \Exception $error = null
-    ) {
+    public function format(RequestInterface $request, ?ResponseInterface $response = null, ?\Throwable $error = null): string
+    {
         if ($response !== null) {
             $body = $response->getBody();
             $bodyString = (string) $body;

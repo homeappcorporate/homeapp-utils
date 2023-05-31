@@ -17,7 +17,7 @@
     "require-dev": {
         "jms/serializer-bundle": "^3.2",
         "nelmio/api-doc-bundle": "^3.3",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^7.7",
         "sonata-project/admin-bundle": "^3.42",
         "sonata-project/doctrine-orm-admin-bundle": "^3.6"
     }
