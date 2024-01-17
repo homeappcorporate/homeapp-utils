@@ -311,6 +311,12 @@ class Attributes implements AttributesInterface
      */
     public ?bool $isDelivered = null;
 
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Groups({"API"})
+     */
+    public ?string $rosreestrRegistrationNumber = null;
+
     //========================== ТОЛЬКО ДЛЯ ДОМОВ =============================
 
     /**
