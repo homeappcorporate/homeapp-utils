@@ -10,6 +10,7 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * @property-read string $name
  * @property-read string $color
+ * @property-read int $extId
  */
 class Attributes implements AttributesInterface
 {
@@ -27,9 +28,17 @@ class Attributes implements AttributesInterface
      */
     public string $color;
 
-    public function __construct(string $name, string $color)
+    /**
+     * @var int
+     * @Serializer\Type("int")
+     * @Serializer\Groups({"API"})
+     */
+    public int $extId;
+
+    public function __construct(string $name, string $color, int $extId)
     {
         $this->name = $name;
         $this->color = $color;
+        $this->extId = $extId;
     }
 }
